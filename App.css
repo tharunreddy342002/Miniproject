@@ -1,0 +1,71 @@
+header{
+  text-align: center;
+}
+body{
+  width: 50%;
+  margin:0 auto;
+}
+header h1{
+  font-size: 100px;
+  color:#2c3e50;
+  font-weight: 400;
+}
+input{
+  color: #2c3e50;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom:1px solid #2c3e50;
+  padding: 5px;
+}
+.task{
+  background-color: #4b5280;
+  padding: 15px;
+  margin: 5px;
+  overflow-x: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.task span{
+  color:#fbf9f9;
+}
+.icon{
+  float: right;
+  margin-right: 20px;
+}
+article{
+  display: grid;
+}
+.edit-todo{
+  width: 85%;
+  font-size: 16px;
+  color: #f0eaea;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+}
+.btn{
+  margin: 0 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 12px;
+  color: #2c3e50;
+  background-color: #ffffff;
+  /* border: 10px; */
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btn.selected{
+  color: #ffffff;
+  background-color: #2c3e50;
+}
+
+.btn.clr{
+  float: right;
+  color: #ffff;
+  background-color: red;
+  width: 150px;
+}
