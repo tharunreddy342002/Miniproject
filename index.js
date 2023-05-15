@@ -1,23 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import {BrowserRouter} from 'react-router-dom'
+import express from 'express';
+import routes from './routes/route.js';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import Connection from './database/db.js';
 
-import { Provider } from 'react-redux'
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const app = express();
 
-import store from './redux/store';
+app.use(cors());
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
-  <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
-   
-  </React.StrictMode> 
- </Provider>
-);
-reportWebVitals();
+app.use(express.json({ extended: true}));
+app.use(express.urlencoded({ extended: true}))
+
+app.use('/',routes);
+
+
+const PORT = 3000;
+
+Connection();
+
+app.listen(PORT, () => console.log(`server is running successfully ${PORT}`));
